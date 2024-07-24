@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    border: border-box;
+    font-family: ARIAL;
+
+}
+body{
+    background: radial-gradient( rgb(203, 251, 235),white);
+}
+/**nav**/
+.nav-bar{
+    height: 60px;
+    width: 100%;
+    /*background:linear-gradient(to right,aquamarine,rgb(10, 247, 168));*/
+    display: flex;
+}
+.empty{
+    width:40%;
+}
+.nav-options{
+    width: 60%;
+    color: rgb(3, 46, 34);
+    font-weight: thin;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav-options p:hover{
+    border-bottom:2px solid #222222;
+    
+}
+
+/**hero-section**/
+.hero-section{
+    height: 600px;
+    width: 100%;
+    text-transform: capitalize;
+   display: flex;
+   
+}
+.text{
+    height: 600px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.intro span{
+    color: rgb(6, 206, 139);
+}
+.social {
+    position: relative;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.social i{
+    color:rgb(2, 65, 44);
+}
+.cv{
+    position: relative;
+    top: 100px;
+    display: flex;
+    align-items: center;
+}
+.cv button{
+    height: 30px;
+    color: white;
+    border-radius: 4px;
+    background-color: rgb(5, 149, 101);
+    
+}
+.cv button:hover{
+    background-color: aliceblue;
+    color: black;
+    border:3px solid rgb(50, 164, 125);
+}
+/**hero-image**/
+.myimage{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.myimage img{
+    height: 400px;
+    width: 400Px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(54, 186, 142),
+    0px 0px 10px rgb(55, 193, 147);
+border:2px solid rgb(53, 182, 139);
+    background-image: contain;
+    animation-name: slidein;
+    animation-duration: 1.5s;
+}
+@keyframes slidein {
+    from{
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+    to{
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
+
+/**skills**/
+.container{
+    height: 500px;
+    width: 100%;
+}
+.container h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(69, 102, 91);
+    font-family: 'Times New Roman', Times, serif;
+}
+.skillsection{
+    margin-top: 20PX;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 80px;
+    animation-duration: 5s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from{
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+    to{
+        translate: 0 0;
+        scale: 100% 1;
+    }
+    
+}
+
+.subject{
+    
+    font-size: 17px;
+    font-weight: thin;
+    color:rgb(2, 68, 45);
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+.progress_bar{
+    width: 100%;
+    height: 10px;
+    background-color: #e4e4ec;
+    padding: 4px 6px;
+    border-radius: 15px ;
+}
+.progress_line{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to right,aquamarine,green);
+    box-shadow: -1px -1px 2px #222222,
+                1px 1px 2px #111111;
+    border-radius: 15px;
+
+}
+.progress_line::after{
+    position: absolute;
+    content: attr(value);
+    top: -35px;
+    right: 0px;
+    transform: translateX(-50%);
+    color: rgb(2, 68, 45);
+    font-size: 17px;
+}
+.skills{
+margin-top: 20px;
+}
+/*project*/
+.projects{
+    height: 400px;
+    width: 100%;
+  
+}
+.projects h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    color:rgb(69, 102, 91);
+    font-family: 'Times New Roman', Times, serif;
+}
+.content{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box{
+    height:300px;
+    width: 300px;
+    background-color: aliceblue;
+    position: relative;
+    box-shadow: 10px 5px 5px aquamarine;
+}
+.box img{
+    height: 300px;
+    width: 300px;
+    display: block;
+    opacity: 1;
+    background-position: contain;
+    transition: .5 ease-in;
+    backface-visibility: hidden;
+}
+.info{
+transition: .5 ease;
+opacity: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+-ms-transform: translate(-50%,-50%);
+
+}
+.box:hover img{
+    opacity: .3;
+}
+.box:hover .info{
+    opacity: 1;
+}
+.effect{
+    text-transform: capitalize;
+    color: rgb(15, 13, 13);
+    font-size: 17px;
+    
+}
+/*contact*/
+.contact{
+    height: 300px;
+    width: 100%;
+    display: flex;
+}
+.contact h1{
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(69, 102, 91);
+    margin-left: 40px;
+}
+.mail{
+    height: 250px;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    
+}
+
+.context i{
+    padding: 10px;
+}
+.message{
+    height: 250px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.input{
+    width: 300px;
+    box-shadow: 0px 0px 10px rgb(54, 186, 142),
+            0px 0px 10px rgb(55, 193, 147);
+    border:2px solid rgb(53, 182, 139);
+}
+.index p{
+    padding-top: 10px;
+    font-size: 17px;
+    font-weight: thin;
+}
+.index button{
+    height: 30px;
+    color: white;
+    border-radius: 4px;
+    background-color: rgb(5, 149, 101);
+}
+.index button:hover{
+    background-color: aliceblue;
+    color: black;
+    border:3px solid rgb(50, 164, 125);   
+}
+/*footer*/
+.footer{
+    height: 100px;
+    width: 100%;
+    color: rgb(5, 149, 101) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
